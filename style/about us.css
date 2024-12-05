@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: 'jakartaPlus'; /* Nama font (bebas) */
+    src: url('../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('TrueType') ; /* Lokasi file font */
+  }
+body{
+    font-family:'jakartaPlus';
+}
+.gaya {
+    background-color: #ECECEC;
+}
+.container {
+    padding: 0; /* Hilangkan padding container */
+}
+img {
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+.data-card-body{
+    margin:10px 0 0 24px;
+}
+.data-card-title{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.data-card-text{
+   
+ font-size: 0.8rem;
+}
+
+@media screen and (min-width:768px) {
+    .data-card-body{
+        margin:6px 0 0 12px;
+   }
+    .data-card-title{
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .data-card-text{
+     font-size: 0.7rem;
+     margin-bottom: px;
+    }
+
+}
+@media screen and (min-width:992px) {
+    .data-card-body{
+        margin:10px 0 0 32px;
+   }
+    .data-card-title{
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .data-card-text{
+     font-size: 0.9rem;
+     margin-bottom: px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .data-card-body{
+        margin:16px 0 0 42px;
+   }
+   
+    .data-card-title{
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+
+    }
+    .data-card-text{
+     font-size: 1rem;
+     margin-bottom: 32px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .data-card-body{
+         margin:16px 0 0 52px;
+    }
+    .data-card-title{
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .data-card-text{
+     font-size: 1.3rem;
+     margin-bottom: 32px;
+    }
+}

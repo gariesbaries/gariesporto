@@ -1,0 +1,55 @@
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)); /* Gradient hitam */
+    pointer-events: none; /* Agar overlay tidak menghalangi interaksi lainnya */
+  }
+
+/* Styling banner section */
+.banner {
+    
+position: relative;
+background-image: url('../images/hero1.png'); /* Ganti dengan gambar Anda */
+background-size: cover;
+background-position: top;
+height: 85vh;
+color: white;
+}
+
+.banner-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -10%);
+text-align: center;
+}
+
+.banner h1 {
+font-size: 4rem;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.banner p {
+font-size: 1.5rem;
+margin-top: 1rem;
+margin-bottom: 2rem;
+font-style: italic;
+}
+
+.banner .btn {
+padding: 0.75rem 2rem;
+font-size: 1.2rem;
+font-weight: bold;
+background-color: #000;
+border: none;
+color: #fff;
+transition: all 0.3s ease-in-out;
+}
+
+.banner .btn:hover {
+background-color: #555;
+}

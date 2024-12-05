@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'monument'; /* Nama font (bebas) */
+    src: url('./fonts/MonumentExtended-Regular.otf') format('opentype'); /* Lokasi file font */
+  }
+
+  @font-face {
+    font-family: 'jakartaPlus'; /* Nama font (bebas) */
+    src: url('./fonts/PlusJakartaSans-VariableFont_wght.ttf') ; /* Lokasi file font */
+  }
+  
+.navbar{
+    height:15vh;
+}
+.navbar-toggler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border: none;
+}
+.navbar-brand{
+    font-family:monument;
+}
+
+@media screen and (max-width: 768px) {
+    /* CSS untuk layar kecil (tablet dan ponsel) */
+    .navbar{
+        height:70px;
+    }
+    .navbar-toggler{
+        height: 44px;
+        width: 44px;
+        
+    }
+  }
+  

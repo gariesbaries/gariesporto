@@ -1,0 +1,19 @@
+.judul{
+    margin-top: 96px;
+    margin-bottom:24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.swiper{
+    width: 95%;
+}
+
+@media screen and (max-width:760px) {
+    .swiper-button-prev{
+        display: none;
+    }
+    .swiper-button-next{
+        display: none;
+    }
+    
+}

@@ -1,0 +1,15 @@
+ /* Mengatur overlay hanya di bagian bawah */
+ .card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi */
+    padding: 15px; /* Jarak teks dari tepi overlay */
+}
+
+@media screen and (max-width:992px) {
+    .data-card{
+        height: 250px;
+    }
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/hero.css">
+    <link rel="stylesheet" href="./style/content.css">
+    <link rel="stylesheet" href="./style/about us.css">
+    <link rel="stylesheet" href="./style/services.css">
+    <link rel="stylesheet" href="./style/footer.css">
+  </head>
+  <body>
+    <!-- navbar----------------------------- -->
+    <nav
+      class="navbar rounded-lg bg-light container-fluid sticky-top lebar-border"
+    >
+      <div class="container-md ">
+        <!-- hamburger menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- end hamburger menu -->
+
+        <!-- nama brand -->
+        <a class="navbar-brand mx-auto" href="#">StreetSoul</a>
+
+        <!-- icon search -->
+        <button
+          class="navbar-toggler rounded-5"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          aria-controls="searchContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i data-feather="search"></i>
+        </button>
+
+        <!-- icon shooping-cart -->
+        <button class="navbar-toggler mx-3 rounded-5 lebar">
+          <i data-feather="shopping-cart" class=""></i>
+        </button>
+
+        <div class="collapse navbar-collapse my-4" id="searchContent">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar---------------------- -->
+
+    <!-- drawwer/ offcanvas --------------->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">drawer</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <ul class="navbar-nav me-auto mb-lg-0">
+            <li class="nav-item mb-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- drawwer/ offcanvas --------------->
+
+
+    <!-- modal/search bar -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body d-flex align-items-center">
+            <!-- Input pencarian -->
+            <input
+              type="text"
+              class="form-control me-2"
+              id="searchInput"
+              placeholder="Type your search..."
+              style="flex: 1"
+              oninput="filterclothes()"
+            />
+
+            <!-- Tombol pencarian dengan ikon -->
+            <button type="button" class="btn btn-primary ms-2">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <!-- Daftar rekomendasi baju -->
+          <ul
+            id="clothRecommendations"
+            class="list-group mt-3"
+            style="display: none"
+          >
+            <!-- Rekomendasi akan muncul di sini -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end modal/search bar -->
+
+     <!-- Banner Section -->
+     <div class="container-fluid banner">
+      <div class="overlay-gradient"></div>
+      <div class="banner-content">
+        <h1>StreetSoul</h1>
+        <p>#Own the Streets. Own Your Soul</p>
+        <button class="btn btn-dark">Buy Now</button>
+      </div>
+    </div>
+    
+    <section class="judul d-flex justify-content-center ">
+      <h2>Trending this week</h2>
+    </section>
+<!-- slider section---------------------------------------- -->
+ <!-- Slider main container -->
+ <div class="swiper container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+     <!-- card -->
+    <div class="card swiper-slide" style="width: 18rem">
+      <img src="./images/wear1.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">jacket keren</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <span class="fw-bold">
+          Rp250.000
+        </span>
+       
+      </div>
+    </div>
+    <!-- end card -->
+   <!-- card -->
+   <div class="card swiper-slide" style="width: 18rem">
+    <img src="./images/wear2.jpg" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">capek ah</h5>
+      <p class="card-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+      <span class="fw-bold">
+        Rp250.000
+      </span>
+     
+    </div>
+  </div>
+  <!-- end card -->
+  <!-- card -->
+  <div class="card swiper-slide" style="width: 18rem">
+    <img src="./images/wear3.webp" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">jacket keren</h5>
+      <p class="card-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+      <span class="fw-bold">
+        Rp250.000
+      </span>
+     
+    </div>
+  </div>
+  <!-- end card -->
+   <!-- card -->
+   <div class="card swiper-slide" style="width: 18rem">
+    <img src="./images/wear4.webp" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">jacket keren</h5>
+      <p class="card-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+      <span class="fw-bold">
+        Rp250.000
+      </span>
+     
+    </div>
+  </div>
+  <!-- end card -->
+    <!-- card -->
+    <div class="card swiper-slide" style="width: 18rem">
+      <img src="./images/wear5.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">jacket keren</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <span class="fw-bold">
+          Rp250.000
+        </span>
+       
+      </div>
+    </div>
+    <!-- end card -->
+
+
+       <!-- card -->
+    <div class="card swiper-slide" style="width: 18rem">
+      <img src="./images/wear6.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">jacket keren</h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <span class="fw-bold">
+          Rp250.000
+        </span>
+       
+      </div>
+    </div>
+    <!-- end card -->
+   
+    ...
+  </div>
+  
+  <!-- If we need pagination -->
+  
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"> </div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+  
+</div>
+<div class="container d-flex justify-content-center mt-5">
+  <button class="btn btn-dark px-5 py-2 fw-bold mb-5">
+    let's shop
+  </button>
+</div>
+
+<!-- carddd about us -->
+<div class="card mb-3 container gaya">
+  <div class="row g-0">
+      <div class="col-md-4">
+          <img src="./images/aboutUs.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-7">
+          <div class="card-body data-card-body">
+              <h3 class="card-title data-card-title">About us</h3>
+              <p class="card-text data-card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nemo incidunt et odit dignissimos! Perspiciatis officiis suscipit laboriosam atque enim itaque omnis optio obcaecati provident harum unde, non totam id!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sint, eaque quos tempore deleniti est eveniet ab saepe officiis at deserunt. Nostrum eligendi dolorem aperiam earum unde fugit. Numquam, corrupti.</p>
+              <button class="btn btn-dark px-5 py-1 fw-bold fs-5">
+                  Explore
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- car about us -->
+
+<!-- services column -->
+<div class="container mx-auto my-5">
+  <h2 class="d-flex justify-content-center">
+      StreetSoul Services
+  </h2>
+  <span class="d-flex justify-content-center text-center">
+      Enjoy a hassle-free shopping experience with services from Ann's Bakehouse & Creamery
+  </span>
+</div>
+<div class="container">
+  <div class="row g-3 d-flex justify-content-center">
+      <div class="col-12 col-lg-4">
+          
+          <!-- card -->
+          <div class="card text-bg-dark data-card position-relative">
+              <img src="./images/services/costumerService.png" class="card-img h-100 object-fit-cover" alt="...">
+              
+              <div class="card-img-overlay">
+                  <div class=" position-absolute bottom-0 p-4">
+                      <h5 class="card-title text-white">Customer Service</h5>
+                      <p class="card-text text-white">Enjoy support and assistance from our dedicated Customer Service team</p>
+                      <button class="btn btn-light">Contact us</button>
+                  
+                  </div>
+              </div>
+          </div>
+          <!-- end card -->
+      </div>
+      <div class="col-12 col-lg-4">
+          <!-- card -->
+          <div class="card text-bg-dark data-card position-relative">
+              <img src="./images/services/costumerService.png" class="card-img h-100 object-fit-cover" alt="...">
+              <div class="card-img-overlay">
+                  <div class=" position-absolute bottom-0 p-4">
+                      <h5 class="card-title text-white">Customer Service</h5>
+                      <p class="card-text text-white ">Enjoy support and assistance from our dedicated Customer Service team</p>
+                      <button class="btn btn-light">Contact us</button>
+                  
+                  </div>
+              </div>
+          </div>
+          <!-- end card -->
+      </div>
+      <div class="col-12 col-lg-4">
+          <!-- card -->
+          <div class="card text-bg-dark data-card position-relative">
+              <img src="./images/services/costumerService.png" class="card-img h-100 object-fit-cover" alt="...">
+              <div class="card-img-overlay">
+                  <div class=" position-absolute bottom-0 p-4">
+                      <h5 class="card-title text-white">Customer Service</h5>
+                      <p class="card-text text-white">Enjoy support and assistance from our dedicated Customer Service team</p>
+                      <button class="btn btn-light">Contact us</button>
+                  
+                  </div>
+              </div>
+          </div>
+          <!-- end card -->
+      </div>
+  </div>
+</div>
+<!-- end service -->
+
+<!-- beyond service -->
+<section class="container text-center py-5">
+  <!-- Title -->
+  <h2 class="fw-bold">Beyond Services</h2>
+  <p class="text-muted">
+      With our Beyond Service, we bring our expertise in unforgettable Event Catering and Corporate Partnerships. 
+      Let's collaborate to create memorable moments and effective solutions for your business needs.
+  </p>
+  <!-- Button -->
+  <button class="btn btn-dark">INFORMATION</button>
+
+  <!-- Images -->
+  <div class="row mt-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./images/beyond1.png" alt="Image 1" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+          <img src="./images/beyond2.png" alt="Image 2" class="img-fluid rounded">
+      </div>
+  </div>
+</section>
+<!-- beyond service end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
+  <!-- Footer Section -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Help Section -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Help</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Size guide</a></li>
+            <li><a href="#">Tracking</a></li>
+            <li><a href="#">Return your order</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Wholesale & Stockists</a></li>
+            <li><a href="#">Do not sell or share my info</a></li>
+          </ul>
+        </div>
+        <!-- Get Our App Section -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Get our App</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">iOS App</a></li>
+            <li><a href="#">Android App</a></li>
+          </ul>
+        </div>
+        <!-- Get In Touch Section -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Get in touch</h5>
+          <p><a href="mailto:email@example.com">Email us</a></p>
+          <h5>Follow us</h5>
+          <div>
+            <a href="#"><i class="bi bi-instagram"></i> Instagram</a><br>
+            <a href="#"><i class="bi bi-facebook"></i> Facebook</a><br>
+            <a href="#"><i class="bi bi-youtube"></i> YouTube</a><br>
+            <a href="#"><i class="bi bi-twitter"></i> Twitter</a><br>
+            <a href="#"><i class="bi bi-pinterest"></i> Pinterest</a>
+          </div>
+        </div>
+      </div>
+      <!-- Payment Section -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <h5>We accept</h5>
+          <div class="d-flex flex-wrap footer-icon">
+            <img src="https://via.placeholder.com/40" alt="AMEX">
+            <img src="https://via.placeholder.com/40" alt="Apple Pay">
+            <img src="https://via.placeholder.com/40" alt="Google Pay">
+            <img src="https://via.placeholder.com/40" alt="MasterCard">
+            <img src="https://via.placeholder.com/40" alt="PayPal">
+            <img src="https://via.placeholder.com/40" alt="UnionPay">
+            <img src="https://via.placeholder.com/40" alt="Visa">
+          </div>
+        </div>
+      </div>
+      <!-- Footer Links -->
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <small>&copy; 2024 Copping Zone IT16165871001 | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Refund Policy</a> | 
+            <a href="#">Terms & Policies</a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="/javascript/slider.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/script.js"></script>
+    <script src="./javascript/searchbar.js"></script>
+    <script src=""></script>
+  </body>
+</html>
