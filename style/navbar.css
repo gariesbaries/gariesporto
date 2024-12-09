@@ -3,10 +3,6 @@
     src: url('./fonts/MonumentExtended-Regular.otf') format('opentype'); /* Lokasi file font */
   }
 
-  @font-face {
-    font-family: 'jakartaPlus'; /* Nama font (bebas) */
-    src: url('./fonts/PlusJakartaSans-VariableFont_wght.ttf') ; /* Lokasi file font */
-  }
   
 .navbar{
     height:15vh;
